@@ -1,0 +1,11 @@
+<section class="current-training" fxLayout="column" fxLayoutAlign="center center">
+  <mat-progress-spinner mode="determinate" [value]="progress"></mat-progress-spinner>
+  <h1>{{progress}}%</h1>
+  <p *ngIf="!finished">Keep it up, You can do it!!</p>
+  <mat-card *ngIf="finished" fxLayout="column" fxLayoutAlign="center center">
+    <mat-card-title >Finished</mat-card-title>
+    <mat-card-content >Well Done!!</mat-card-content>
+    <button mat-raised-button color="accent" (click)="returnToTraining()" >Return to Training</button>
+  </mat-card>
+  <button mat-raised-button color="accent" *ngIf="!finished" (click)="onStopTraining()">Stop</button>
+</section>

@@ -1,0 +1,22 @@
+a {
+  text-decoration: none;
+  color: beige;
+}
+
+a:active,
+a:hover {
+  color: gray;
+}
+
+.heading {
+  text-shadow: 3px 2px #242123;
+  font-weight: bold;
+  font-size: 140%;
+  color: beige;
+}
+
+.headIcon {
+  text-shadow: 3px 2px #242123;
+  font-weight: bold;
+  font-size: 80%;
+}

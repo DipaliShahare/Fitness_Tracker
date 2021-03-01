@@ -1,0 +1,30 @@
+<section fxLayoutAlign="center" style="padding: 30px;">
+  <mat-card >
+    <mat-card-title>Fitness Tracker</mat-card-title>
+  </mat-card>
+</section>
+
+<mat-card>
+  <mat-card-title > bla bla bla bla fitness fitness fitness some more bla bla bla on fitness</mat-card-title>
+</mat-card>
+<section fxLayout="row"  fxLayoutGap="80px" style="padding: 20px;">
+  <img fxHide.xs fxFlexOffset="15" style="width: 350px; height: 300px;" src="./assets/images/Fitness_images.jpg">
+  <form
+    [formGroup]="loginForm"
+    (ngSubmit)="onSubmit()"
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    fxLayoutGap="5px">
+    <mat-form-field>
+      <input formControlName="email" matInput type="email" placeholder="Your Email">
+      <mat-error>Enter valid email</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input formControlName="password" matInput type="password" placeholder="Your Password">
+      <mat-error>Enter correct password</mat-error>
+    </mat-form-field>
+    <button *ngIf="!isLoading" [disabled]="loginForm.invalid" type="submit" mat-raised-button color="primary">Login</button>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+  </form>
+</section>
+
